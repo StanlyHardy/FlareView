@@ -15,6 +15,10 @@
 		E5D2DE661DDD94E3000AC1AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D2DE641DDD94E3000AC1AA /* LaunchScreen.storyboard */; };
 		E5D2DE711DDD94E3000AC1AA /* FlareViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D2DE701DDD94E3000AC1AA /* FlareViewTests.m */; };
 		E5D2DE7C1DDD94E3000AC1AA /* FlareViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D2DE7B1DDD94E3000AC1AA /* FlareViewUITests.m */; };
+		E5D2DE8C1DDD9563000AC1AA /* FlareView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D2DE8B1DDD9563000AC1AA /* FlareView.m */; };
+		E5D2DE8F1DDD95D7000AC1AA /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D2DE8D1DDD95D7000AC1AA /* heart.png */; };
+		E5D2DE901DDD95D7000AC1AA /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D2DE8E1DDD95D7000AC1AA /* love.png */; };
+		E5D2DE941DDD9AA8000AC1AA /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D2DE931DDD9AA8000AC1AA /* star.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,11 @@
 		E5D2DE771DDD94E3000AC1AA /* FlareViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlareViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D2DE7B1DDD94E3000AC1AA /* FlareViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlareViewUITests.m; sourceTree = "<group>"; };
 		E5D2DE7D1DDD94E3000AC1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D2DE8A1DDD9563000AC1AA /* FlareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlareView.h; path = flares/FlareView.h; sourceTree = "<group>"; };
+		E5D2DE8B1DDD9563000AC1AA /* FlareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlareView.m; path = flares/FlareView.m; sourceTree = "<group>"; };
+		E5D2DE8D1DDD95D7000AC1AA /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		E5D2DE8E1DDD95D7000AC1AA /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love.png; sourceTree = "<group>"; };
+		E5D2DE931DDD9AA8000AC1AA /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,10 @@
 		E5D2DE551DDD94E3000AC1AA /* FlareView */ = {
 			isa = PBXGroup;
 			children = (
+				E5D2DE931DDD9AA8000AC1AA /* star.png */,
+				E5D2DE8D1DDD95D7000AC1AA /* heart.png */,
+				E5D2DE8E1DDD95D7000AC1AA /* love.png */,
+				E5D2DE891DDD9558000AC1AA /* flares */,
 				E5D2DE591DDD94E3000AC1AA /* AppDelegate.h */,
 				E5D2DE5A1DDD94E3000AC1AA /* AppDelegate.m */,
 				E5D2DE5C1DDD94E3000AC1AA /* ViewController.h */,
@@ -138,6 +151,15 @@
 				E5D2DE7D1DDD94E3000AC1AA /* Info.plist */,
 			);
 			path = FlareViewUITests;
+			sourceTree = "<group>";
+		};
+		E5D2DE891DDD9558000AC1AA /* flares */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2DE8A1DDD9563000AC1AA /* FlareView.h */,
+				E5D2DE8B1DDD9563000AC1AA /* FlareView.m */,
+			);
+			name = flares;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +265,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5D2DE8F1DDD95D7000AC1AA /* heart.png in Resources */,
+				E5D2DE901DDD95D7000AC1AA /* love.png in Resources */,
 				E5D2DE661DDD94E3000AC1AA /* LaunchScreen.storyboard in Resources */,
 				E5D2DE631DDD94E3000AC1AA /* Assets.xcassets in Resources */,
 				E5D2DE611DDD94E3000AC1AA /* Main.storyboard in Resources */,
+				E5D2DE941DDD9AA8000AC1AA /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +298,7 @@
 				E5D2DE5E1DDD94E3000AC1AA /* ViewController.m in Sources */,
 				E5D2DE5B1DDD94E3000AC1AA /* AppDelegate.m in Sources */,
 				E5D2DE581DDD94E3000AC1AA /* main.m in Sources */,
+				E5D2DE8C1DDD9563000AC1AA /* FlareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlareView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vom.FlareView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlareView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -428,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlareView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vom.FlareView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlareView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Z-ff-gjG">
+                                <rect key="frame" x="269" y="268" width="62" height="64"/>
+                                <state key="normal" image="love.png"/>
+                                <connections>
+                                    <action selector="didTappedSmiley:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5y-bV-fTf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osf-eJ-XOU">
+                                <rect key="frame" x="236" y="66" width="128" height="128"/>
+                                <state key="normal" image="heart.png"/>
+                                <connections>
+                                    <action selector="didTappedHeart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAw-zb-C6z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViG-hv-im0">
+                                <rect key="frame" x="236" y="377" width="128" height="128"/>
+                                <state key="normal" image="star.png"/>
+                                <connections>
+                                    <action selector="didTappedStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGO-L0-zpk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ViG-hv-im0" firstAttribute="leading" secondItem="osf-eJ-XOU" secondAttribute="leading" id="B60-Om-cVP"/>
+                            <constraint firstItem="ViG-hv-im0" firstAttribute="top" secondItem="f3Z-ff-gjG" secondAttribute="bottom" constant="45" id="P8p-nk-8w0"/>
+                            <constraint firstItem="f3Z-ff-gjG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YHo-Gc-4u6"/>
+                            <constraint firstItem="f3Z-ff-gjG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d41-pY-nJT"/>
+                            <constraint firstItem="osf-eJ-XOU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="dPy-sy-Mmm"/>
+                            <constraint firstItem="osf-eJ-XOU" firstAttribute="centerX" secondItem="f3Z-ff-gjG" secondAttribute="centerX" id="ohb-I3-KA0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heart" destination="osf-eJ-XOU" id="OhW-jk-laG"/>
+                        <outlet property="smiley" destination="f3Z-ff-gjG" id="zlD-NZ-VJI"/>
+                        <outlet property="star" destination="ViG-hv-im0" id="Sb8-gv-Fx2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="289"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart.png" width="128" height="128"/>
+        <image name="love.png" width="62" height="64"/>
+        <image name="star.png" width="128" height="128"/>
+    </resources>
 </document>

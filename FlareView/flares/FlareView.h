@@ -21,13 +21,13 @@
 //SOFTWARE.
 
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "FlareView.h"
-@interface ViewController : UIViewController
+@interface FlareView : NSObject
+{
+    UIColor *flareColor;
 
-@property (weak, nonatomic) IBOutlet UIButton *smiley;
-@property (weak, nonatomic) IBOutlet UIButton *heart;
-@property (weak, nonatomic) IBOutlet UIButton *star;
-
+}
++ (FlareView *)sharedCenter;
+-(void) flarify: (UIView* ) chilView inParentView:(UIView*) rootView withColor : (UIColor *)fillColor;
 @end
-

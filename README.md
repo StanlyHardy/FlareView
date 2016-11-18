@@ -4,7 +4,7 @@
     This Library will let you to add colourful flares around any UIView's.
     To flarify just include the following code...
     
-    [[FlareView sharedCenter]flarify:[UIView to flarify]v inParentView:[the container of your view that has to be flarified] withColor:[color of the flare]];
+    [[FlareView sharedCenter]flarify:[UIView to flarify] inParentView:[the container of your view that has to be flarified] withColor:[color of the flare]];
     
     
 

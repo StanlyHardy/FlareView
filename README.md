@@ -1,7 +1,7 @@
 # FlareView
 > Spice up your app UIView's by adding magical flares around any UIView's.
 
-
+[![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
@@ -67,6 +67,8 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [objectivec-image]:https://img.shields.io/badge/Language-Objective%20C-blue.svg?style=flat
 [objectivec-url]: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
 [codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad

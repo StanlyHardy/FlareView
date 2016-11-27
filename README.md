@@ -1,4 +1,4 @@
-# Product Name
+# FlareView
 > Spice up your app UIView's by adding magical flares around any UIView's.
 
 

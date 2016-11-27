@@ -6,7 +6,7 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
-We accumulate lots of views within a view controller but have you ever thought of making your user interface by adding magical flares when the user interacts with your app?  Use this library if you wanna do so...
+Have you ever thought of making your user interface by adding magical flares when the user interacts with your app?  Use this library if you wanna do so...
 ![screen shot](https://cloud.githubusercontent.com/assets/14089959/20383662/af86e6ae-acd6-11e6-8191-43786511bb31.gif)
 
 ## Features

@@ -1,6 +1,7 @@
 # Product Name
 > Spice up your app UIView's by adding magical flares around any UIView's.
 
+[![Swift Version][[objectivec-image]][objectivec-url]
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  

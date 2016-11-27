@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Flareview by StanlyHardy</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Flareview</h1>
+        <h2>Create Animatic flares around your uiview&#39;s</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/StanlyHardy/FlareView/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/StanlyHardy/FlareView/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/StanlyHardy/FlareView" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="flareview" class="anchor" href="#flareview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FlareView</h1>
+
+<blockquote>
+<p>Spice up your app UIView's by adding magical flares around any UIView's.</p>
+</blockquote>
+
+<p><a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html"><img src="https://img.shields.io/badge/Language-Objective%20C-blue.svg?style=flat" alt="Objectivec Version"></a>
+<a href="https://travis-ci.org/dbader/node-datadog-metrics"><img src="https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+<a href="https://img.shields.io/cocoapods/v/LFAlertController.svg"><img src="https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg" alt="CocoaPods Compatible"></a><br>
+<a href="http://cocoapods.org/pods/LFAlertController"><img src="https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat" alt="Platform"></a></p>
+
+<p>Have you ever thought of making your user interface by adding magical flares when the user interacts with your app?  Use this library if you wanna do so...</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/14089959/20383662/af86e6ae-acd6-11e6-8191-43786511bb31.gif" alt="screen shot"></p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>[x] All UIView's that's enclosed within a parent view can be flarified without any exception.</li>
+<li>[x] You can customize the flare colours as per your own requirement</li>
+</ul>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>iOS 8.0+</li>
+<li>Xcode 7.3</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<h4>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CocoaPods</h4>
+
+<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code>Flareview</code> by adding it to your <code>Podfile</code>:</p>
+
+<div class="highlight highlight-source-ruby"><pre>platform <span class="pl-c1">:ios</span>, <span class="pl-s"><span class="pl-pds">'</span>8.0<span class="pl-pds">'</span></span>
+use_frameworks!
+pod <span class="pl-s"><span class="pl-pds">'</span>flareview<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>~&gt; 0.1<span class="pl-pds">'</span></span></pre></div>
+
+<p>To get the full benefits import <code>FlareView/FlareView.h</code> wherever you import UIKit</p>
+
+<div class="highlight highlight-source-objc"><pre>import UIKit
+#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">&lt;</span>FlareView/FlareView.h<span class="pl-pds">&gt;</span></span></pre></div>
+
+<h4>
+<a id="manually" class="anchor" href="#manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manually</h4>
+
+<ol>
+<li>Download and drop <code>FlareView.h</code> and <code>FlareView.m</code> in your project.<br>
+</li>
+<li>Congratulations!<br>
+</li>
+</ol>
+
+<h2>
+<a id="usage-example" class="anchor" href="#usage-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage example</h2>
+
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">&lt;</span>FlareView/FlareView.h<span class="pl-pds">&gt;</span></span>
+- (<span class="pl-k">void</span>)viewDidLoad {
+    [<span class="pl-v">super</span> <span class="pl-c1">viewDidLoad</span>];
+    [[FlareView <span class="pl-c1">sharedCenter</span>]flarify:<span class="pl-v">self</span>.smiley <span class="pl-c1">inParentView:</span><span class="pl-v">self</span>.view <span class="pl-c1">withColor:</span>[UIColor <span class="pl-c1">yellowColor</span>]];
+}</pre></div>
+
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>I would love for you to contribute to <strong>FlareView</strong>, check the <code>LICENSE</code> file for more info.</p>
+
+<h2>
+<a id="meta" class="anchor" href="#meta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Meta</h2>
+
+<p>Stanly Moses – <a href="https://in.linkedin.com/in/stanlymoses">@Linkedin</a> – <a href="mailto:stanlyhardy@yahoo.com">stanlyhardy@yahoo.com</a></p>
+
+<p>Distributed under the MIT license. See <code>LICENSE</code> for more information.</p>
+
+<p><a href="https://github.com/StanlyHardy/">https://github.com/StanlyHardy/FlareView</a></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>

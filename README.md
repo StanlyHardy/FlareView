@@ -38,9 +38,7 @@ To get the full benefits import `FlareView/FlareView.h` wherever you import UIKi
 import UIKit
 #import <FlareView/FlareView.h>
 ```
-```
-github "StanlyHardy/FlareView"
-```
+
 #### Manually
 1. Download and drop ```FlareView.h``` and ```FlareView.m``` in your project.  
 2. Congratulations!  

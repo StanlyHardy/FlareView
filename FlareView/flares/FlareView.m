@@ -28,14 +28,18 @@
 static FlareView *sharedFlareViewCenter = nil;
 
 + (FlareView *)sharedCenter {
-    if (sharedFlareViewCenter == nil) {
-        sharedFlareViewCenter = [[super allocWithZone:NULL] init];
-    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{ // make sure sharedCenter has been initialed once in a life time
+        if (!sharedFlareViewCenter) {
+            sharedFlareViewCenter = [[super allocWithZone:NULL] init];
+        }
+    });
     return sharedFlareViewCenter;
 }
 
--(void) flarify: (UIView* ) chilView inParentView:(UIView*) rootView withColor : (UIColor *)fillColor{
+-(void) flarify: (UIView* ) chilView inParentView:(UIView*) rootView withColor : (UIColor *)fillColor {
     
+    chilView.userInteractionEnabled = NO; // prevent user presses continuously
     flareColor = fillColor;
     chilView.transform = CGAffineTransformMakeTranslation(0, 20);
     [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:0.2 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -127,8 +131,7 @@ static FlareView *sharedFlareViewCenter = nil;
                 chilView.transform = CGAffineTransformIdentity;
             } completion:^(BOOL finished){
                 // if you want to do something once the animation finishes, put it here
-                
-                
+                chilView.userInteractionEnabled = YES;
             }];
         }];
         

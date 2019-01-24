@@ -1,5 +1,6 @@
 # FlareView
-> Spice up your app UIView's by adding magical flares around any UIView's.
+> Lane Segmentation using several architectures.
+
 
 [![Objectivec Version][objectivec-image]][objectivec-url]
 [![Build Status][travis-image]][travis-url]
@@ -7,55 +8,63 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
-Have you ever thought of making your user interface by adding magical flares when the user interacts with your app?  Use this library if you wanna do so...
+It contains the code for both training and segmentation of lane lines using Deep Learning. Currently the supported architectures are ENET, UNET, Modified VGG.
 
-![screen shot](https://cloud.githubusercontent.com/assets/14089959/20383662/af86e6ae-acd6-11e6-8191-43786511bb31.gif)
 
 ## Features
 
-- [x] All UIView's that's enclosed within a parent view can be flarified without any exception.
-- [x] You can customize the flare colours as per your own requirement
+- [x] The training code is very much scalable towards any new architecture.
+- [x] All changes made in the config file will effect in the training process so that the training logic can be without hassle.
+- [x] The training configuartion are easily tunable through the config file provided.
 
 ## Requirements
 
-- iOS 8.0+
-- Xcode 7.3
+- The training module has been built using Pycharm 2018.1.4.
+- The System requirement’s are 2.7 GHz Intel Core i5 with atleast 8 GB of RAM.
 
 ## Installation
 
-#### CocoaPods
-You can use [CocoaPods](http://cocoapods.org/) to install `Flareview` by adding it to your `Podfile`:
+#### OpenCV
+You can use [Anaconda](https://conda.io/) to install `opencv` with the following command line.:
 
-```ruby
-platform :ios, '8.0'
-use_frameworks!
-pod 'flareview', '~> 0.1'
+```
+conda install -c conda-forge opencv
 ```
 
-To get the full benefits import `FlareView/FlareView.h` wherever you import UIKit
+#### Image Augmentation
+You can use [PIP](https://pypi.org/project/pip/) to install the module `imgaug` with the following command line.:
 
-``` objective-c
-import UIKit
-#import <FlareView/FlareView.h>
+```
+pip install imgaug
 ```
 
-#### Manually
-1. Download and drop ```FlareView.h``` and ```FlareView.m``` in your project.  
-2. Congratulations!  
+#### tensorflow
+You can use [PIP](https://pypi.org/project/pip/) to install `tensorflow` with the following command line or please go through their official installation guideline[https://www.tensorflow.org/install/pip]:
+
+```
+pip install tensorflow
+```
+
+
+#### Keras
+You can use [PIP](https://pypi.org/project/pip/) to install `keras` with the following command line or please go through their official installation guideline[https://keras.io/#installation]:
+
+```
+pip install keras
+```
 
 ## Usage example
 
-```objective-c
-#import <FlareView/FlareView.h>
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [[FlareView sharedCenter]flarify:self.smiley inParentView:self.view withColor:[UIColor yellowColor]];
-}
+Run the following script to dispatch the trainer.
+
+
+```
+python3 train.py  --conf=./config.json
 ```
 
 ## Contribute
 
-I would love for you to contribute to **FlareView**, check the ``LICENSE`` file for more info.
+I would love for you to contribute to **KITT-Road Segmentation**, check the ``LICENSE`` file for more info.
 
 ## Meta
 
@@ -63,7 +72,7 @@ Stanly Moses – [@Linkedin](https://in.linkedin.com/in/stanlymoses) – stanlyh
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/StanlyHardy/FlareView](https://github.com/StanlyHardy/)
+[https://github.com/StanlyHardy/KITTI-Road-Segmentation](https://github.com/StanlyHardy/)
 
 [objectivec-image]:https://img.shields.io/badge/Language-Objective%20C-blue.svg?style=flat
 [objectivec-url]: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
